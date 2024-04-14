@@ -78,7 +78,7 @@ else ifeq ($(OS),Windows_NT)
   # This new OS path is confirmed working on Windows 10 / Cygwin64.
   openfst_add_CXXFLAGS = -g -O2 -Wa,-mbig-obj
 else
-  openfst_add_CXXFLAGS = -g -O3 -msse -msse2
+  openfst_add_CXXFLAGS = -g -O3
 endif
 
 openfst-$(OPENFST_VERSION)/Makefile: openfst-$(OPENFST_VERSION)
@@ -89,7 +89,7 @@ openfst-$(OPENFST_VERSION)/Makefile: openfst-$(OPENFST_VERSION)
 		LDFLAGS="$(LDFLAGS)" LIBS="-ldl"
 
 openfst-$(OPENFST_VERSION):
-	git clone --single-branch https://github.com/alphacep/openfst openfst-$(OPENFST_VERSION)
+	git clone --single-branch https://github.com/Alan-Chen99/openfst.git openfst-$(OPENFST_VERSION)
 
 openfst_cleaned:
 	-for d in openfst/ openfst-*/; do \
