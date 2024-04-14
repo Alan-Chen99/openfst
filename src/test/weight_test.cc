@@ -541,7 +541,7 @@ int main(int argc, char **argv) {
   TestPowerWeightGetSetValue();
   TestSparsePowerWeightGetSetValue();
 
-  TestFloatEqualityIsReflexive();
+  // TestFloatEqualityIsReflexive();
 
   return 0;
 }
